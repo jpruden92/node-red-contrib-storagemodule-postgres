@@ -31,6 +31,9 @@ let postgresfilesystem = {
             try {
                 this.pool = new Pool({
                     'connectionString': settings.postgresURI,
+                    ssl: {
+                        rejectUnauthorized: false
+                    }
                     //max: 10, //default
                     //idleTimeoutMillis: 10000, //default   //(10 seconds)
                     //connectionTimeoutMillis: 0, //default
